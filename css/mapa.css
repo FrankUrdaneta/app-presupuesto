@@ -1,0 +1,13 @@
+#mapaCoche {
+  margin-top: 0% !important;
+  height: 65%;
+  width: 40.5%;
+  display: flex;
+  position: absolute;
+  right: 0.2%;
+  border-radius: 4px;
+  border-top: 1px solid #007fff;
+  border-right: 2px solid #007fff;
+  overflow-y: scroll;
+  overflow: hidden;
+}

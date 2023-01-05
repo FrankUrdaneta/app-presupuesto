@@ -1,0 +1,382 @@
+/* :root {
+  --main-primary-color: #00aade;
+  --main-secondary-color: #f9b364;
+} */
+
+/* .card-group {
+  box-shadow: 0 1rem 1rem rgb(0 0 0 / 18%) !important;
+} */
+.carousel-indicators {
+  display: none;
+}
+.card {
+  border: none;
+}
+
+.card-img-top {
+  max-width: 120%;
+  width: 110% !important;
+  display: flex !important;
+
+  margin-top: 30% !important;
+}
+/*boleto comprar y ver ruta*/
+.price,
+.form-selec {
+  /* background: linear-gradient(-225deg, white 40%, var(--main-primary-color) 100%, var(--main-primary-color) 40%); */
+  background-image: linear-gradient(
+    -225deg,
+    white 20%,
+    var(--main-primary-color) 60%,
+    var(--main-primary-color) 40%
+  );
+  border-radius: 10px;
+}
+
+/*** ESTILOS BOTÓN GROW SKEW ***/
+.ov-btn-grow-skew {
+  background: var(--main-secondary-color); /* color de fondo */
+  color: #fff; /* color de fuente */
+  border: 2px solid #fff; /* tamaño y color de borde */
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.ov-btn-grow-skew:hover {
+  color: var(--main-primary-color) !important; /* color de fuente hover */
+}
+.ov-btn-grow-skew::after {
+  content: "";
+  background: #ffffff; /* color de fondo hover */
+  color: var(--main-primary-color) !important;
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.3s ease;
+}
+.ov-btn-grow-skew:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(-45deg) scale(1, 1);
+}
+
+/* estilos mapa */
+.pasajeIcon {
+  font-size: 25px;
+}
+.logoPasajes {
+  overflow: hidden;
+}
+
+.verCoche {
+  width: 90%;
+}
+
+/* Boton ver ruta */
+.cta {
+  /* font-family: Avenir, sans-serif; */
+  position: relative;
+  margin: auto;
+  padding: 15px 9px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+.cta a {
+  text-decoration: white;
+}
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0.5px solid var(--main-secondary-color);
+  display: block;
+  border-radius: 28px;
+  background: var(--main-primary-color);
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.cta span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta:hover:before {
+  width: 100%;
+  /* background: linear-gradient(to right bottom, var(--main-secondary-color), #0059b2 120%); */
+  background: var(--main-secondary-color);
+}
+.cta:hover svg {
+  transform: translateX(0);
+  stroke: #fff;
+}
+.cta:active {
+  transform: scale(0.96);
+}
+/* Barra Cambiar busqueda*/
+.nav-filtros {
+  background: var(--main-primary-color) !important;
+  border-bottom-left-radius: 2px !important;
+  border-bottom-right-radius: 2px !important;
+  margin-top: -1% !important;
+  padding: 0.5%;
+}
+.nav-filtros form {
+  margin: 0% !important;
+  margin-left: -1px !important;
+
+  margin-right: -100px !important;
+}
+.nav-filtros button {
+  width: 25%;
+}
+.nav-filtros input {
+  width: 40% !important;
+}
+.btn-outline-success {
+  color: white !important;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+.btn-outline-success:hover {
+  background-color: white;
+  color: #11263a !important;
+}
+
+.botonCambiarBusqueda {
+  background-color: var(--main-secondary-color);
+  color: white;
+  border-radius: 5px;
+  padding: 3px;
+  width: 20% !important;
+  padding: 10px 2px 10px 0px;
+  margin-right: 3% !important;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.botonCambiarBusqueda:hover {
+  color: var(--main-primary-color) !important;
+}
+.botonCambiarBusqueda::after {
+  content: "";
+  background: #fff; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.3s ease;
+}
+
+.botonCambiarBusqueda:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(-45deg) scale(1, 1);
+}
+.contenidoBarraCambiar {
+  color: white !important;
+  display: flex;
+  justify-content: left !important;
+  align-items: center !important;
+}
+
+.iconFlecha {
+  padding-left: 0% !important;
+  padding-right: 0% !important;
+}
+
+.btnMasRapido {
+  border: none !important;
+}
+
+.empresaSelect {
+  background-color: transparent !important;
+  margin-top: -5% !important;
+  color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: left !important;
+  position: relative;
+}
+
+.modal-body {
+  position: relative;
+  left: -50%;
+  flex: 1 1 auto;
+  padding: 1rem;
+  width: 200%;
+  height: 200px;
+}
+.modal-body input {
+  width: 150% !important;
+}
+.modal-body button {
+  width: 100% !important;
+}
+.rampa {
+  font-size: larger;
+}
+
+/* caja buscador pasajes index */
+.forma {
+  font-family: "Montserrat", sans-serif, Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: var(--main-primary-color);
+
+  border-bottom: 1px solid var(--main-secondary-color);
+  position: absolute;
+  left: auto;
+  z-index: 100;
+  /* opacity: 0.9; */
+  padding-bottom: 2%;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 2.5%;
+  font-size: 1rem;
+
+  /* border: 1px solid red; */
+}
+
+#cerrarBusqueda {
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative;
+  left: 13px;
+  margin-top: 3%;
+  width: 92%;
+  color: var(--main-primary-color);
+  background-color: white !important;
+  border: 1px solid var(--main-secondary-color);
+}
+
+.cerrarBusqueda {
+  display: none !important;
+}
+.rd-navbar-fixed .rd-navbar-nav-wrap.active {
+  background-color: var(--main-primary-color);
+}
+
+.ocultarMapa {
+  display: block;
+}
+.nofound {
+  background-color: #ffffff !important;
+  color: white !important;
+  position: relative !important;
+
+  justify-content: center !important;
+}
+
+.fila1 {
+  display: inline-flex;
+  justify-content: top;
+  border: 2px solid red !important;
+}
+
+#observacion {
+  color: red !important;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-dialog {
+  margin-top: 50%;
+}
+
+.rd-navbar-toggle span:after,
+.rd-navbar-toggle span:before,
+.rd-navbar-toggle span {
+  background-color: #fff;
+}
+
+select,
+option {
+  color: white;
+  background-color: var(--main-primary-color);
+}
+
+.fa-circle-exclamation:before,
+.fa-exclamation-circle:before {
+  color: var(--main-primary-color);
+}
+
+.calendario_group {
+  display: flex !important;
+  position: relative !important;
+  max-width: max-content;
+
+  padding: 0% !important;
+}
+body > div.btn-group-sm.calendario_group > button {
+  display: flex;
+  border: 1px solid white;
+  padding: 0.5%;
+}
+
+#carouselExampleIndicators > div > div > div > button {
+  background-color: var(--main-primary-color);
+  /* padding: 1px 5px 0.5px 5px !important; */
+  border: 1px solid white;
+}
+.carousel-control-next-icon {
+  position: relative;
+}
+.carousel-control-prev-icon {
+  position: relative;
+}
+
+div.card > div > h6 > span > a:hover {
+  color: black !important;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 4%;
+}
+
+.rd-navbar-wrap {
+  height: 0% !important;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+}
+#pruebaBoleto button {
+  /* width: 60%; */
+  font-size: large;
+}
+
+
+#carouselExampleIndicators > div > div > div > button:focus {
+  border: 2px solid var(--main-secondary-color);
+}

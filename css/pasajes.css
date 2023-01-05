@@ -1,0 +1,3860 @@
+/* :root {
+  --main-primary-color: #00aade;
+  --main-secondary-color: #f9b364;
+} */
+
+.card-group {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  transition: all 1s ease;
+  margin-left: 5px;
+  box-shadow: rgb(0 0 0 / 61%) 0px 3px 6px, rgb(0 0 0 / 50%) 0px 3px 6px;
+  margin-top: 10px;
+  width: 97%;
+  /* z-index: 1; */
+}
+.card-group:hover {
+  box-shadow: rgb(58, 83, 109) 0px 20px 30px -10px !important;
+}
+.card {
+  border: none;
+}
+
+/*** ESTILOS BOTÃ“N GROW SKEW ***/
+
+.invertirSentido {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  background-color: var(--main-secondary-color);
+}
+
+.origenInput {
+  padding: 0;
+  border: none !important;
+  display: flex;
+}
+.invertirDestino {
+  border-radius: 5px;
+  width: 40%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -10% !important;
+  position: relative;
+  z-index: 100;
+  left: 2%;
+  background-color: var(--main-secondary-color);
+}
+
+.origenIcono {
+  background-color: var(--main-secondary-color);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  left: 2%;
+}
+
+.botonBuscarPasajes {
+  border-radius: 5px;
+  height: 130%;
+  position: relative;
+  top: -22%;
+  background-color: var(--main-secondary-color);
+  font-size: large;
+}
+/*INICIA MODO TELEFONO*/
+@media (min-width: 300px) and (max-width: 380px) {
+  body > div.page.wrapper > header > div {
+    height: 0% !important;
+  }
+  .ov-btn-grow-skew {
+    border: none !important;
+    /* margin-top: -1% !important; */
+  }
+
+  .coche {
+    background-color: var(--main-secondary-color) !important;
+    width: 100%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+  }
+  #navbarScroll {
+    margin-top: 20% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    z-index: 2;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  #navbarScroll {
+    margin-top: 22% !important;
+  }
+  #map {
+    margin-top: 9% !important;
+  }
+  .closeMapa {
+    position: relative !important;
+
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .ol-zoom {
+    top: 2.5em;
+  }
+  /* #cerrarBusqueda {
+    width: 10% !important;
+    left: -4px !important;
+    margin-top: -25% !important;
+    z-index: 2;
+  } */
+  .imgCordobaMuni {
+    max-width: 100% !important;
+    width: 310px !important;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: small;
+    padding: 3%;
+  }
+  #selectEmpresa {
+    font-size: small;
+    padding: 3%;
+  }
+
+  .origenPasaje {
+    margin-bottom: 2px;
+    width: 155% !important;
+    left: -100% !important;
+  }
+
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  .swiper-container {
+    position: relative;
+    top: 150px;
+  }
+  .botonBuscarPasajes {
+    top: 5%;
+    left: -3%;
+    width: 101%;
+  }
+  #buscar_pasajes {
+    left: -1.5%;
+  }
+  #buscador {
+    position: relative;
+    top: 4.5% !important;
+
+    margin-bottom: 1%;
+  }
+  .pasajero {
+    position: relative;
+    left: 1% !important;
+    width: 100% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 5% !important;
+    width: 100% !important;
+  }
+
+  .swiper-slide {
+    width: 50%;
+    background-position: 40% -20%;
+  }
+  .swiper-slideA {
+    width: 100%;
+    height: 90% !important;
+  }
+  .contenedor-texto {
+    /* margin-top: 15% !important; */
+    height: 140%;
+    /* width: -50% !important; */
+  }
+  .maleta {
+    font-size: small;
+  }
+  .section .parallax-content {
+    margin-top: 15%;
+  }
+  .nuestrosServicios .row-30 {
+    justify-content: center !important;
+    width: -200% !important;
+    height: 300% !important;
+  }
+  .forma {
+    padding-top: 5% !important;
+    padding-bottom: 2% !important;
+  }
+  .nav-filtros {
+    z-index: 50;
+  }
+  .contenedor-texto img {
+    max-width: 150% !important;
+    width: 150% !important;
+    margin-left: -40% !important;
+  }
+  #pruebaBoleto img {
+    width: 100% !important;
+    margin-top: 15% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: small !important;
+  }
+  #pruebaBoleto span {
+    font-size: small !important;
+  }
+  #pruebaBoleto i {
+    font-size: small !important;
+  }
+  #pruebaBoleto button {
+    font-size: small;
+  }
+}
+@media (min-width: 381px) and (max-width: 480px) {
+  #carousel_calendario button {
+    font-size: small;
+  }
+  #buscar_pasajes {
+    left: -0.5%;
+    margin-top: 0.3% !important;
+  }
+  /*button ver coche*/
+  .ov-btn-grow-skew {
+    border: none !important;
+    /* margin-top: -1% !important; */
+  }
+
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 0% !important;
+  }
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+    /* border: 1px solid red; */
+  }
+  .card-button {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    margin-left: 3px;
+  }
+  #navbarScroll {
+    margin-top: 20% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .ol-zoom {
+    top: 2.5em;
+  }
+  /* #cerrarBusqueda {
+    left: -5px !important;
+    margin-top: -25% !important;
+    width: 10% !important;
+  } */
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: small;
+    padding: 3%;
+  }
+  #selectEmpresa {
+    font-size: small;
+    padding: 3%;
+  }
+
+  .origenPasaje {
+    margin-bottom: 2px;
+    width: 155% !important;
+    left: -100% !important;
+  }
+
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  .swiper-container {
+    position: relative;
+    top: 150px;
+  }
+  .botonBuscarPasajes {
+    top: 5%;
+    left: -2%;
+    width: 100%;
+  }
+  #buscador {
+    position: relative;
+    top: 30px !important;
+
+    margin-bottom: 1%;
+  }
+  .pasajero {
+    position: relative;
+    left: -115% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 148% !important;
+  }
+
+  .collapse1 {
+    margin-top: 10%;
+    display: flex;
+    margin-left: 20% !important;
+    height: 100% !important;
+  }
+  .swiper-slide {
+    width: 150%;
+    background-position: 40% -20%;
+  }
+  .swiper-slideA {
+    width: 200%;
+    height: 90% !important;
+    background-position: 20% -20%;
+  }
+  .contenedor-texto {
+    margin-top: 15% !important;
+    height: 100%;
+    /* width: -50% !important; */
+  }
+  .maleta {
+    font-size: small;
+  }
+  .section .parallax-content {
+    margin-top: 15%;
+  }
+  .nuestrosServicios .row-30 {
+    /* flex-wrap: nowrap !important; */
+    justify-content: center !important;
+    width: -200% !important;
+    padding-top: 15%;
+  }
+  .forma {
+    margin-top: 5.5% !important;
+  }
+  .contenedor-texto img {
+    width: 100% !important;
+  }
+  #pruebaBoleto img {
+    width: 100% !important;
+    margin-top: 5% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: small !important;
+  }
+  #pruebaBoleto span {
+    font-size: small !important;
+  }
+  #pruebaBoleto i {
+    font-size: small !important;
+  }
+  #pruebaBoleto button {
+    font-size: small;
+  }
+}
+@media (min-width: 410px) and (max-width: 440px) {
+  #calendarios_botones {
+    padding-left: 0.5% !important;
+  }
+}
+@media (min-width: 441px) and (max-width: 463px) {
+  #calendarios_botones {
+    padding-left: 4% !important;
+  }
+}
+@media (min-width: 464px) and (max-width: 480px) {
+  #carousel_calendario button {
+    font-size: medium !important;
+  }
+}
+@media (min-width: 481px) and (max-width: 540px) {
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  .ov-btn-grow-skew {
+    border: none !important;
+    margin-top: -1% !important;
+  }
+  #buscar_pasajes {
+    left: -0.5%;
+    margin-top: 0.3% !important;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 0% !important;
+  }
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+  }
+  #navbarScroll {
+    margin-top: 20% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: small;
+    padding: 3%;
+  }
+  #selectEmpresa {
+    font-size: small;
+    padding: 3%;
+  }
+
+  .ol-zoom {
+    top: 2em;
+  }
+  /* #cerrarBusqueda {
+    left: 1px !important;
+    margin-top: -23% !important;
+    width: 40px !important;
+  } */
+  .origenPasaje {
+    margin-bottom: 2px;
+    width: 155% !important;
+    left: 100% !important;
+  }
+
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+
+  .swiper-container {
+    position: relative;
+    top: 150px;
+  }
+  .botonBuscarPasajes {
+    top: 5%;
+    left: -1%;
+    width: 101%;
+  }
+  #buscador {
+    position: relative;
+    top: 40px !important;
+
+    margin-bottom: 1%;
+  }
+  .pasajero {
+    position: relative;
+    left: -115% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 220% !important;
+  }
+  .collapse1 {
+    margin-top: 10%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 175%;
+    background-position: 40% -20%;
+  }
+  .swiper-slideA {
+    width: 250%;
+    height: 85% !important;
+    background-position: 20% -20%;
+  }
+  .contenedor-texto {
+    margin-top: 15% !important;
+    height: 100%;
+    width: -50% !important;
+  }
+  .maleta {
+    font-size: medium;
+  }
+  .section .parallax-content {
+    margin-top: 15%;
+  }
+  .nuestrosServicios .row-30 {
+    /* flex-wrap: nowrap !important; */
+    justify-content: center !important;
+    padding: 16% !important;
+    font-size: 60% !important;
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  #carousel_calendario button {
+    font-size: medium !important;
+  }
+  #pruebaBoleto img {
+    width: 100% !important;
+    margin-top: 5% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: small !important;
+  }
+  #pruebaBoleto span {
+    font-size: small !important;
+  }
+  #pruebaBoleto i {
+    font-size: small !important;
+  }
+  #pruebaBoleto button {
+    font-size: small;
+  }
+  #map {
+    margin-top: -16%;
+  }
+  #closeMapa {
+    margin-top: -32% !important;
+  }
+  #cerrarBusqueda {
+    margin-top: 1% !important;
+    margin-left: 2% !important;
+  }
+}
+@media (min-width: 541px) and (max-width: 579px) {
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 0% !important;
+  }
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+  }
+  #navbarScroll {
+    margin-top: 20% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 3%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 3%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+  /* #cerrarBusqueda {
+    left: 1px !important;
+    margin-top: -25% !important;
+    width: 40px !important;
+  } */
+  .origenPasaje {
+    margin-bottom: 2px;
+    width: 155% !important;
+    left: 100% !important;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: 2px;
+    left: -0.5%;
+    width: 101%;
+  }
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 40px !important;
+
+    margin-bottom: 1%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .pasajero {
+    position: relative;
+    left: -111% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 260% !important;
+  }
+  .collapse1 {
+    margin-top: 10%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 145%;
+    margin-top: 2%;
+  }
+  .swiper-slideA {
+    width: 250%;
+    height: 85% !important;
+  }
+  .contenedor-texto {
+    margin-top: 15% !important;
+
+    height: 100%;
+    width: -50% !important;
+  }
+  .maleta {
+    font-size: small;
+  }
+  .section .parallax-content {
+    margin-top: 15%;
+  }
+  .nuestrosServicios .row-30 {
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    padding: 10% !important;
+    font-size: 65% !important;
+    margin-top: -10%;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  #carousel_calendario button {
+    font-size: medium !important;
+  }
+  #carousel_calendario {
+    padding-left: 6% !important;
+  }
+  #pruebaBoleto img {
+    width: 100% !important;
+    margin-top: 5% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: small !important;
+  }
+  #pruebaBoleto span {
+    font-size: small !important;
+  }
+  #pruebaBoleto i {
+    font-size: small !important;
+  }
+  #pruebaBoleto button {
+    font-size: small;
+  }
+  #map {
+    margin-top: -16%;
+  }
+  #closeMapa {
+    margin-top: -32% !important;
+  }
+  #cerrarBusqueda {
+    margin-top: 1% !important;
+    margin-left: 2.5% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -3%;
+    margin-top: 1%;
+  }
+  #carouselExampleCaptions img {
+    width: 110% !important;
+    max-width: 300% !important;
+    /* border: 1px solid red; */
+  }
+  #carouselExampleCaptions .maleta {
+    font-size: x-large !important;
+  }
+  #buscar_pasajes {
+    margin-top: 0.5% !important;
+  }
+  .ov-btn-grow-skew {
+    border: none !important;
+    margin-top: -1% !important;
+  }
+}
+@media (min-width: 580px) and (max-width: 720px) {
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+  }
+  #navbarScroll {
+    margin-top: 15% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 3%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 3%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+  /* #cerrarBusqueda {
+    left: 1px !important;
+    margin-top: -110px !important;
+    width: 40px !important;
+  } */
+  #buscador > div > form > div:nth-child(2) > div {
+    margin-top: 20px;
+    margin-left: -9px;
+  }
+  .origenPasaje {
+    display: flex;
+    margin-bottom: 3px;
+    width: 155% !important;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: 2px;
+    left: 109%;
+    width: 101%;
+  }
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 45px !important;
+
+    margin-bottom: 1%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .pasajero {
+    position: relative;
+    left: -115% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 265% !important;
+  }
+
+  .collapse1 {
+    margin-top: 1%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 110%;
+    height: 85% !important;
+  }
+  .contenedor-texto {
+    /* border: 1px solid red !important; */
+    margin-top: 0% !important;
+    /* margin-bottom: 10%; */
+    /* padding-top: 5%; */
+    height: 100%;
+    width: -50% !important;
+    /* padding: 10%; */
+  }
+  .maleta {
+    font-size: large;
+  }
+  .section .parallax-content {
+    margin-top: 15%;
+  }
+  .nuestrosServicios .row-30 {
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    padding: 10% !important;
+    font-size: 65% !important;
+    margin-top: -10%;
+    margin-left: 1%;
+    margin-right: 1%;
+    /* height: -500% !important; */
+    /* display: inline-flex; */
+    /* justify-content: left !important; */
+  }
+  #carousel_calendario button {
+    font-size: medium !important;
+  }
+
+  #pruebaBoleto img {
+    width: 100% !important;
+    margin-top: 5% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: medium !important;
+  }
+  #pruebaBoleto span {
+    font-size: medium !important;
+  }
+  #pruebaBoleto i {
+    font-size: medium !important;
+  }
+  #pruebaBoleto button {
+    font-size: medium;
+  }
+  #map {
+    margin-top: -16%;
+  }
+  #closeMapa {
+    margin-top: -32% !important;
+  }
+  #cerrarBusqueda {
+    margin-top: 1% !important;
+    margin-left: 2.5% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -3%;
+    margin-top: 1%;
+  }
+  #carouselExampleCaptions img {
+    width: 110% !important;
+    max-width: 300% !important;
+    /* border: 1px solid red; */
+  }
+  #carouselExampleCaptions .maleta {
+    font-size: x-large !important;
+  }
+  #buscar_pasajes {
+    margin-top: 0% !important;
+  }
+  .ov-btn-grow-skew {
+    border: none !important;
+    margin-top: -1% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-top: 6%;
+  }
+}
+@media (min-width: 721px) and (max-width: 890px) {
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+  }
+  #navbarScroll {
+    margin-top: 15% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+  /* #cerrarBusqueda {
+    left: 1px !important;
+    margin-top: -17% !important;
+    width: 40px !important;
+  } */
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-top: 20px;
+    margin-left: -9px;
+  }
+  .origenPasaje {
+    display: flex;
+    margin-bottom: 3px;
+    width: 155% !important;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: 2px;
+    left: 107%;
+    width: 101%;
+  }
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 45px !important;
+
+    margin-bottom: 1%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .pasajero {
+    position: relative;
+    left: -115% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 303% !important;
+  }
+
+  .swiper-slide-caption {
+    margin-top: -20%;
+  }
+  #carrouselFotos {
+    margin-top: 11%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 1%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 110%;
+    height: 85% !important;
+    background-position: 0% 65%;
+  }
+  .carousel-item {
+    margin-top: 9%;
+    padding: 5%;
+  }
+  .maleta {
+    /* border: 1px solid red; */
+    font-size: x-large;
+  }
+  .contenedor-texto {
+    padding-top: 8%;
+    margin-top: -1% !important;
+  }
+  .nuestrosServicios .row-30 {
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    padding: 10% !important;
+    font-size: 75% !important;
+    margin-top: -10%;
+    margin-left: 1%;
+    margin-right: 1%;
+    /* height: -500% !important; */
+    /* display: inline-flex; */
+    /* justify-content: left !important; */
+  }
+  .section .parallax-content {
+    margin-top: 10%;
+  }
+  #carousel_calendario button {
+    font-size: medium !important;
+  }
+
+  #pruebaBoleto img {
+    width: 70% !important;
+    margin-top: 5% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: medium !important;
+  }
+  #pruebaBoleto span {
+    font-size: medium !important;
+  }
+  #pruebaBoleto i {
+    font-size: medium !important;
+  }
+  #pruebaBoleto button {
+    font-size: medium;
+  }
+  #map {
+    margin-top: -16%;
+  }
+  #closeMapa {
+    margin-top: -32% !important;
+  }
+  #cerrarBusqueda {
+    margin-top: 1% !important;
+    margin-left: 2.5% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -3%;
+    margin-top: 1%;
+  }
+  #carouselExampleCaptions img {
+    width: 90% !important;
+    max-width: 300% !important;
+    /* border: 1px solid red; */
+  }
+  #carouselExampleCaptions .maleta {
+    font-size: x-large !important;
+  }
+  #buscar_pasajes {
+    margin-top: 0% !important;
+  }
+  .ov-btn-grow-skew {
+    border: none !important;
+    margin-top: -1% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-top: 6%;
+  }
+  #carousel_calendario > div.carousel-item.active {
+    margin-top: -5%;
+    padding-bottom: 0%;
+  }
+  #login {
+    color: white;
+  }
+  #nav-menu > nav > div.rd-navbar-main-outer.menu-navegacion > div > div > ul {
+    margin-left: -20% !important;
+  }
+}
+@media (min-width: 891px) and (max-width: 991px) {
+  .modal-dialog {
+    margin-top: 25%;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-top: 1% !important;
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-left: 8px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 3px;
+    width: 96%;
+  }
+  #navbarScroll {
+    margin-top: 15% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  #cambiarBusqueda {
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5%;
+  }
+  .filaCambiarBusqueda i {
+    font-size: medium !important;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+  /* #cerrarBusqueda {
+    left: 1px !important;
+    margin-top: -17% !important;
+    width: 40px !important;
+  } */
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-top: 20px;
+    margin-left: -9px;
+  }
+
+  .origenPasaje {
+    display: flex;
+    margin-bottom: 3px;
+    width: 155% !important;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: 2px;
+    left: 106.5%;
+    width: 101%;
+  }
+  .invertirDestino {
+    position: relative;
+    left: 0px !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 0px !important;
+
+    margin-bottom: 1%;
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .pasajero {
+    position: relative;
+    left: -110% !important;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 360% !important;
+  }
+  .swiper-slide-caption {
+    margin-top: -20%;
+  }
+  #carrouselFotos {
+    margin-top: 10%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 2%;
+    height: 80% !important;
+  }
+  /*Carousel completo, maleta es el texto e img son las imagenes*/
+  .carousel-item {
+    margin-top: 7.5%;
+    padding: 5%;
+  }
+  .contenedor-texto {
+    margin-top: 10% !important;
+  }
+  /*texto del carousel*/
+  .maleta {
+    font-size: xx-large;
+  }
+  .contenedor-texto img {
+    margin-top: -10% !important;
+
+    width: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+
+  /*barra busqueda*/
+  .forma {
+    margin-top: 5.7% !important;
+  }
+  /*Nuestros servicios*/
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+  .nuestrosServicios .row-30 {
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    padding: 9% !important;
+    font-size: 80% !important;
+    margin-top: -7%;
+  }
+  /*logos Muni*/
+  .pantallaTelefono .imgMuni {
+    width: 16%;
+    margin-top: -28px !important;
+  }
+  .pantallaTelefono .imgSecre {
+    width: 14%;
+    margin-top: -30px !important;
+  }
+  /*Carrusel fotos*/
+  section:nth-child(1) {
+    background: white !important;
+  }
+  section:nth-child(2) {
+    background: white !important;
+  }
+  section:nth-child(3) {
+    background: white !important;
+  }
+  section:nth-child(4) {
+    background: white !important;
+  }
+  #carousel_calendario button {
+    font-size: large !important;
+  }
+
+  #pruebaBoleto img {
+    width: 70% !important;
+    margin-top: 5% !important;
+  }
+  #pruebaBoleto h6 {
+    font-size: medium !important;
+  }
+  #pruebaBoleto span {
+    font-size: medium !important;
+  }
+  #pruebaBoleto i {
+    font-size: medium !important;
+  }
+  #pruebaBoleto button {
+    font-size: medium;
+  }
+  #map {
+    margin-top: -6%;
+  }
+  #closeMapa {
+    margin-top: -12% !important;
+  }
+  #cerrarBusqueda {
+    margin-top: 1% !important;
+    margin-left: 2.5% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -3%;
+    margin-top: 1%;
+  }
+  #carouselExampleCaptions img {
+    width: 90% !important;
+    max-width: 300% !important;
+    margin-top: 10% !important;
+    /* border: 1px solid red; */
+  }
+  #carouselExampleCaptions .maleta {
+    font-size: x-large !important;
+  }
+  #buscar_pasajes {
+    margin-top: 0% !important;
+  }
+  .ov-btn-grow-skew {
+    border: none !important;
+    margin-top: -1% !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-top: 6%;
+  }
+  #carousel_calendario > div.carousel-item.active {
+    margin-top: -5%;
+    padding-bottom: 0%;
+  }
+  #login {
+    color: white;
+  }
+  #nav-menu > nav > div.rd-navbar-main-outer.menu-navegacion > div > div > ul {
+    margin-left: -20% !important;
+  }
+}
+/*FINALIZA MODO TELEFONO*/
+/*INICIA MODO PC*/
+@media (min-width: 992px) and (max-width: 1080px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 853px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 45px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 150px;
+  }
+  
+  .card-group {
+    margin-bottom: 1.5px !important;
+    margin-top: -5px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: -8% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 1.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 10%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -40% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 1081px) and (max-width: 1199px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 903px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 200px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 280px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 1.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 1103px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+    border: 2px solid red;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 200px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 3.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+  /*desde aqui*/
+  /*quita el pequeño margen que tenia el html completo*/
+  pre {
+    margin-bottom: 0 !important;
+  }
+  .carousel-item {
+    height: 70% !important;
+  }
+  .carousel-item .maleta {
+    font-size: xx-large !important;
+  }
+  /*cambiar tamaño caja buscador*/
+  #buscador input {
+    width: 200% !important;
+  }
+}
+@media (min-width: 1441px) and (max-width: 1500px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 1203px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 70px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 200px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 3.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 1501px) and (max-width: 1799px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 1403px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 70px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 200px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 3.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 1800px) and (max-width: 2160px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 1503px !important;
+    margin-top: -40px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 200px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 2.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 2161px) and (max-width: 2200px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 1803px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 300px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 1.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 2201px) and (max-width: 2600px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 2003px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 300px;
+  }
+
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 1.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+  /*desde aqui*/
+  /*quita el pequeño margen que tenia el html completo*/
+  pre {
+    margin-bottom: 0 !important;
+  }
+  .carousel-item {
+    height: 70% !important;
+  }
+  .carousel-item .maleta {
+    font-size: xx-large !important;
+  }
+  /*cambiar tamaño caja buscador*/
+  #buscador input {
+    width: 200% !important;
+  }
+}
+@media (min-width: 2601px) and (max-width: 3000px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 2253px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  #carouselExampleIndicators > div > div > div > button {
+    width: 300px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 1.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+@media (min-width: 3001px) and (max-width: 4320px) {
+  .modal-dialog {
+    margin-top: 25% !important;
+  }
+  #cerrarBusqueda {
+    position: absolute !important;
+    left: 2553px !important;
+    margin-top: -41px !important;
+    width: 14% !important;
+  }
+  #navbarScroll {
+    margin-top: 0% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 55px;
+  }
+  /* con esta se ajusta el tamaño del boton calendario */
+  #carouselExampleIndicators > div > div > div > button {
+    width: 300px;
+  }
+  .carousel-item {
+    height: 300% !important;
+  }
+  .card-group {
+    margin-bottom: 10.5px !important;
+    margin-top: 0px !important;
+  }
+  .card-button {
+    justify-content: start !important;
+    margin-left: 6px;
+  }
+  body > div.buscarHorario > #buscador > .forma {
+    font-size: small !important;
+    position: relative !important;
+  }
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(1) > div {
+    margin-bottom: 1% !important ;
+    font-size: small;
+    left: 0% !important;
+    padding: 0% !important;
+  }
+
+  .buscar_gps {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .coche {
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -1%;
+  }
+  .card-body {
+    padding: 10% !important;
+  }
+
+  #cambiarBusqueda {
+    position: absolute;
+    margin-top: -30px;
+    left: 500px !important;
+    width: 100% !important;
+    font-size: small;
+    padding: 3%;
+  }
+  .filaCambiarBusqueda {
+    font-size: small;
+    justify-content: center;
+    align-items: center;
+  }
+  .closeMapa {
+    position: relative !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    left: 0% !important;
+  }
+  .imgCordobaMuni {
+    width: 470px;
+    display: flex;
+    margin-top: 2% !important;
+    margin-bottom: 1%;
+  }
+  #ordenarPor {
+    font-size: medium;
+    padding: 1%;
+    width: 120%;
+  }
+  #selectEmpresa {
+    font-size: medium;
+    padding: 1%;
+  }
+  .ol-zoom {
+    top: 2em;
+  }
+
+  #buscador > div.forma.mt-2.position-sticky > form > div:nth-child(2) > div {
+    margin-left: -9px;
+  }
+  .forma {
+    margin-top: 1.5% !important;
+  }
+  .origenPasaje {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+  }
+  #buscar_pasajes {
+    position: relative;
+    left: 80%;
+  }
+  .botonBuscarPasajes {
+    position: relative;
+    top: -30%;
+    left: 70%;
+    width: 120% !important;
+  }
+  .invertirDestino {
+    position: relative;
+    left: -10% !important;
+    background-color: var(--main-secondary-color);
+  }
+  #buscador {
+    position: relative;
+    top: 4% !important;
+
+    width: 100%;
+  }
+  .swiper-container {
+    position: relative;
+    top: 120px;
+  }
+  .idayVuelta {
+    position: relative;
+    left: 390% !important;
+  }
+  .pasajero {
+    position: relative;
+    left: 145% !important;
+  }
+  .inputOrigen {
+    width: 130px;
+  }
+  .navbar-expand-lg > .container,
+  .navbar-expand-lg > .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .list-custom-2 {
+    margin-left: -20px;
+  }
+  .list-custom-2 li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .isotope-condensed {
+    padding: 0 0 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .isotope-condensed .row.row-condensed > [class*="col"] + [class*="col"] {
+    margin-top: 25px;
+  }
+  .swiper-slide-caption {
+    margin-top: -9%;
+  }
+  #carrouselFotos {
+    margin-top: 0%;
+    max-height: 500px;
+  }
+  .collapse1 {
+    margin-top: 0%;
+
+    height: 80% !important;
+  }
+  .swiper-slide {
+    width: 110%;
+  }
+  .swiper-slideA {
+    width: 120%;
+    height: 100% !important;
+    background-position: 0% 70%;
+  }
+  .contenedor-texto {
+    padding: 5%;
+  }
+  .maleta {
+    font-size: 65%;
+  }
+
+  .section .contenedor-texto {
+    border: 1px solid red !important;
+    left: 10%;
+    width: 50%;
+    padding: 100% !important;
+  }
+  .section .parallax-content {
+    margin-top: 5%;
+  }
+  .container.nuestrosServicios {
+    margin-top: 0%;
+  }
+}
+/*FINALIZA MODO PC*/
+
+.inputOrigen {
+  border: 2px solid #ddd8fd;
+}
+
+/* .inputOrigen:focus{
+  /* border-bottom: 1px solid var(--main-secondary-color)!important; */
+/* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px!important;
+}*/
+.inputOrigen:focus {
+  border-bottom: 4px solid var(--main-secondary-color);
+}
+.inputOrigen:hover {
+  border-bottom: 4px solid var(--main-secondary-color);
+}
+
+.idayVuelta {
+  background-color: transparent;
+  font-size: large;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: left !important;
+  position: relative;
+  top: 30px !important;
+
+  border-bottom: 2px solid var(--main-secondary-color);
+}
+.pasajero {
+  background-color: transparent;
+  font-size: large;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: left !important;
+  position: relative;
+  top: 30px !important;
+  left: 50px;
+  border-bottom: 2px solid var(--main-secondary-color);
+}
+
+.pantallaTelefono {
+  background-color: var(--main-primary-color) !important;
+}
+
+/* boton ir arriba */
+#button-up {
+  width: 40px;
+  height: 40px;
+  background: var(--main-secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+  z-index: 150;
+}
+
+#button-up:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 0, 0, 0, 1);
+}
+
+.descubre {
+  position: relative;
+}
+
+.nuestrosServicios {
+  margin-top: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgServicio {
+  margin: 0%;
+}
+
+#inputGroupSelect01 :focus {
+  border-color: none;
+  outline: none;
+}
+#inputGroupSelect01 option {
+  font-weight: normal;
+  background-color: white;
+  color: var(--main-primary-color);
+  border-radius: 5px;
+}
+
+#inputGroupSelect01 option[selected] {
+  background-color: rgb(204, 24, 24);
+  color: var(--main-primary-color);
+}
+
+.img1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+section {
+  height: 500px;
+  /* display: flex !important; */
+  /*grid-template-columns: 1fr 1fr !important; */
+  padding: 0 40px;
+  align-items: center;
+}
+
+section h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+section p {
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+/* 
+section a {
+  display: inline-block;
+  padding: 7px 0;
+  color: #283773;
+  text-decoration: none;
+  width: 100px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  background: #fff;
+} */
+
+.contenedor-texto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 5%;
+}
+
+.contenedor-texto img {
+  margin-top: 20%;
+  width: 75%;
+}
+
+/* estilos boton origen */
+
+input {
+  border: 1px solid transparent;
+  background-color: black;
+  padding: 10px;
+  font-size: 12px;
+}
+
+input[type="submit"] {
+  background-color: rgb(29, 104, 179);
+
+  cursor: pointer;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid var(--main-primary-color);
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+
+.autocomplete-items div {
+  padding: 3px;
+  cursor: pointer;
+  background-color: var(--main-primary-color);
+  border-bottom: 1px solid white;
+  color: white;
+  font-size: 12px;
+}
+
+/*when hovering an item:*/
+
+/*when navigating through the items using the arrow keys:*/
+.autocomplete-active {
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
+
+.buscar_gps {
+  background-color: var(--main-primary-color) !important;
+  border: DodgerBlue !important;
+}
+.buscar_gps:hover {
+  border: 1px solid var(--main-primary-color) !important;
+}
+.buscar_gps:focus {
+  border: 2px solid var(--main-secondary-color) !important;
+}
+
+/*cambios responsive*/
+.imgSecretaria {
+  width: 25%;
+  margin-left: -50%;
+}
+.imgMuni {
+  width: 100%;
+  margin-left: 20%;
+}
+
+.menu-navegacion {
+  padding-top: 1%;
+  padding-left: 0%;
+
+  margin-bottom: 0px;
+}
+
+.menu-lista {
+  padding-left: -500px !important;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center;
+  padding-bottom: 1%;
+}
+
+.buscarHorarios {
+  border: 2px solid black;
+}
+
+/* con esta media hago que de 992 el mapa se vea por defecto */
+@media screen and (min-width: 992px) {
+  .mapaOl {
+    visibility: visible;
+  }
+}

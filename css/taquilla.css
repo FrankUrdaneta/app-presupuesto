@@ -1,0 +1,14 @@
+.taquilla{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+#btn{
+    border: none;
+    border-radius: 10px;
+    height: 100%;
+    color: white;
+    background-color: #009ee2;
+}
